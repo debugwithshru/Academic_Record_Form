@@ -124,10 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
             div.style.gap = '15px';
             div.style.cursor = 'pointer';
             
-            // Radio button UI to match Image 3 exactly
             div.innerHTML = `
                 <input type="radio" name="student_list_select" id="radio_${index}" value="${student.id}" style="cursor: pointer; transform: scale(1.1);">
-                <label for="radio_${index}" style="cursor: pointer; font-size: 1rem; color: #495057; font-weight: 400; width: 100%;">${student.id}</label>
+                <label for="radio_${index}" style="cursor: pointer; font-size: 1rem; color: #495057; font-weight: 400; width: 100%;">${student.id} - ${student.name}</label>
             `;
             
             div.onclick = (e) => {
