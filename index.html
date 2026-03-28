@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prior Academic Record - Cocoon Group Tuition</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <header>
+            <img src="./cocoon logo.webp" alt="Cocoon Logo" class="logo">
+            <h1 class="brand-name">COCOON GROUP TUITION</h1>
+            <h2 class="form-title">PRIOR ACADEMIC RECORD</h2>
+            <p class="form-subtitle">Enter the student's previous academic marks below.</p>
+        </header>
+
+        <form id="academicForm">
+            <!-- Section 1: Identification -->
+            <section>
+                <h3 class="section-title">Student Identification</h3>
+                <div class="grid-row">
+                    <div class="input-group">
+                        <label for="student_id">Student ID / Roll No. <span class="required">*</span></label>
+                        <div class="searchable-dropdown" id="studentDropdown">
+                            <input type="text" id="student_id_search" placeholder="Search Roll No..." autocomplete="off">
+                            <div class="dropdown-list" id="studentList">
+                                <div class="dropdown-item loading">Loading students...</div>
+                            </div>
+                            <input type="hidden" id="student_id" name="student_id" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="student_name">Student Name</label>
+                        <input type="text" id="student_name" name="student_name" placeholder="Auto-fills on selection" readonly>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: School & Exam -->
+            <section>
+                <h3 class="section-title">Exam Information</h3>
+                <div class="grid-row">
+                    <div class="input-group">
+                        <label for="prior_school">Prior School Name <span class="required">*</span></label>
+                        <select id="prior_school" name="prior_school" required>
+                            <option value="" disabled selected>Select School</option>
+                            <option value="DAV">DAV</option>
+                            <option value="NHP">NHP</option>
+                            <option value="DMWA">DMWA</option>
+                            <option value="NHS">NHS</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="prior_exam">Exam Name <span class="required">*</span></label>
+                        <input type="text" id="prior_exam" name="prior_exam" placeholder="e.g. 10th Final 2024" required>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Marks Table -->
+            <section>
+                <h3 class="section-title">Subject-wise Marks</h3>
+                <div class="marks-container">
+                    <div class="marks-table">
+                        <div class="marks-header">Subject</div>
+                        <div class="marks-header">Obtained <span class="required">*</span></div>
+                        <div class="marks-header">Max <span class="required">*</span></div>
+
+                        <div class="subject-label">Maths</div>
+                        <input type="number" name="maths_ob" placeholder="0" required min="0">
+                        <input type="number" name="maths_max" placeholder="100" required min="0">
+
+                        <div class="subject-label">Science</div>
+                        <input type="number" name="science_ob" placeholder="0" required min="0">
+                        <input type="number" name="science_max" placeholder="100" required min="0">
+
+                        <div class="subject-label">English</div>
+                        <input type="number" name="english_ob" placeholder="0" required min="0">
+                        <input type="number" name="english_max" placeholder="100" required min="0">
+
+                        <div class="subject-label">Social Science</div>
+                        <input type="number" name="socsci_ob" placeholder="0" required min="0">
+                        <input type="number" name="socsci_max" placeholder="100" required min="0">
+
+                        <div class="subject-label">2nd Language</div>
+                        <input type="number" name="lang2_ob" placeholder="0" required min="0">
+                        <input type="number" name="lang2_max" placeholder="100" required min="0">
+                    </div>
+                </div>
+            </section>
+
+            <div id="successOverlay" class="success-overlay">
+                <div class="success-card">
+                    <div class="success-icon">✓</div>
+                    <h2>DATA SUBMITTED</h2>
+                    <p>Academic record has been sent to the portal.</p>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-btn" id="submitBtn">Submit Academic Record</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

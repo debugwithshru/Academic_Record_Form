@@ -1,0 +1,4 @@
+# Ignore any sensitive or large files in this subfolder
+*.log
+node_modules/
+.DS_Store
