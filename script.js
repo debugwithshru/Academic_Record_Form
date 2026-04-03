@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const studentIdHidden = document.getElementById('student_id');
     const studentNameInput = document.getElementById('student_name');
     
-    const WEBHOOK_URL = 'https://n8n.srv1498466.hstgr.cloud/webhook-test/cb6489f6-b8f7-4b9a-8486-1583b40ebd0f';
+    const WEBHOOK_URL = 'https://n8n.srv1498466.hstgr.cloud/webhook/cb6489f6-b8f7-4b9a-8486-1583b40ebd0f';
     const SHEET_ID = '16JAViFIXgf0oDqC5Nl0V6UpGqKrUVGAHkoEeYw1LdGs';
     const GID = '91172728';
 
